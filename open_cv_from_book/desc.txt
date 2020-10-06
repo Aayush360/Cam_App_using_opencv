@@ -1,0 +1,11 @@
+
+
+detectMultiScale():
+
+image : Matrix of the type CV_8U containing an image where objects are detected.
+scaleFactor : Parameter specifying how much the image size is reduced at each image scale.
+This scale factor is used to create scale pyramid as shown in the picture. Suppose, the scale factor is 1.03, it means we're using a small step for resizing, i.e. reduce size by 3 %, we increase the chance of a matching size with the model for detection is found, while it's expensive.
+minNeighbors : Parameter specifying how many neighbors each candidate rectangle should have to retain it. This parameter will affect the quality of the detected faces: higher value results in less detections but with higher quality. We're using 5 in the code.
+flags : Parameter with the same meaning for an old cascade as in the function cvHaarDetectObjects. It is not used for a new cascade.
+minSize : Minimum possible object size. Objects smaller than that are ignored.
+maxSize : Maximum possible object size. Objects larger than that are ignored.
